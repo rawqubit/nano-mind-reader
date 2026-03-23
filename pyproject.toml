@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "nano-mind-reader"
+version = "1.0.0"
+description = "Mechanistic interpretability experiment: visualizing the internal thought patterns of a tiny GPT."
+license = {text = "MIT"}
+requires-python = ">=3.10"
+readme = "README.md"
+
+[project.scripts]
+nano-mind-reader = "nano_mind_reader.main:cli"
+
+[tool.setuptools.packages.find]
+include = ["nano_mind_reader*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
